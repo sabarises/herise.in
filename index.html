@@ -3,50 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Primary Meta Tags -->
 <title>Herise — When She Rises, Everyone Rises</title>
-<meta name="title" content="Herise — A Women-First Economy & Trust Ecosystem">
-<meta name="description" content="Herise is a premium, women-first trust economy where you can monetize your skills, discover handcrafted products, and connect in a safe, verified community.">
-<meta name="keywords" content="women empowerment, freelancing for women, women marketplace, safe community, work from home, handmade products, verified women network">
-<meta name="author" content="Herise">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://herise.com/">
-<meta property="og:title" content="Herise — When She Rises, Everyone Rises">
-<meta property="og:description" content="A platform built by and for women — to earn, to sell, to move safely, and to hold each other up. Claim your place in the circle.">
-<meta property="og:image" content="https://herise.com/hero_community_1785677048052.jpg">
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://herise.com/">
-<meta property="twitter:title" content="Herise — When She Rises, Everyone Rises">
-<meta property="twitter:description" content="A platform built by and for women — to earn, to sell, to move safely, and to hold each other up. Claim your place in the circle.">
-<meta property="twitter:image" content="https://herise.com/hero_community_1785677048052.jpg">
-
-<!-- Advanced SEO & Crawling -->
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://herise.com/">
-<meta name="theme-color" content="#2A0410">
-
-<!-- Icons (Placeholders for when you upload icons) -->
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-<!-- Structured Data (JSON-LD) for Google Knowledge Graph -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Herise",
-  "url": "https://herise.com/",
-  "logo": "https://herise.com/hero_community_1785677048052.jpg",
-  "description": "Herise is a premium, women-first trust economy where you can monetize your skills, discover handcrafted products, and connect in a safe, verified community.",
-  "foundingDate": "2026"
-}
-</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;0,9..144,700;1,9..144,450;1,9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -161,29 +118,28 @@
   .nav-cta:hover { transform: translateY(-2px); box-shadow:0 6px 20px rgba(242,169,59,0.5); }
 
   /* ---------- HERO ---------- */
-  header.hero {
-    position: relative;
+  .hero {
     min-height:100vh;
     display:flex; flex-direction:column; align-items:center; justify-content:center;
     text-align:center;
-    padding:120px 24px 60px;
+    padding:140px 24px 80px;
     background: linear-gradient(180deg, transparent 0%, rgba(91, 19, 39, 0.4) 60%, rgba(242, 169, 59, 0.15) 100%);
   }
   
   /* The animated rising logo */
   .hero-logo-wrap {
-    position:absolute; left:50%; bottom: 0;
-    width: min(90vw, 750px); height:auto; transform:translateX(-50%);
+    position:absolute; left:50%; bottom:-50px;
+    width: min(90vw, 850px); height:auto; transform:translateX(-50%);
     animation:rise 2.4s cubic-bezier(.2,.8,.2,1) 0.3s both;
     z-index: -1;
-    opacity: 0.25;
-    filter: drop-shadow(0 0 60px rgba(242,169,59,0.4));
+    opacity: 0.65;
+    filter: drop-shadow(0 0 40px rgba(242,169,59,0.5));
   }
   .hero-logo-wrap svg { width: 100%; height: 100%; }
 
   @keyframes rise {
     from { transform:translateX(-50%) translateY(140px); opacity:0; }
-    to { transform:translateX(-50%) translateY(0); opacity: 0.25; }
+    to { transform:translateX(-50%) translateY(0); opacity:1; }
   }
   
   .hero-content { position:relative; z-index:5; width: 100%; max-width: 900px; margin: 0 auto; text-shadow: 0 4px 16px rgba(0,0,0,0.8); }
@@ -232,9 +188,11 @@
     display:flex; flex-direction:column; align-items:center; gap:8px;
     animation:fadeUp 1s ease 1s both;
   }
+  .scroll-cue .line { width:1px; height:30px; background:linear-gradient(180deg, var(--marigold), transparent); animation:bob 1.8s ease-in-out infinite; }
+  @keyframes bob { 0%,100%{transform:translateY(0);opacity:1;} 50%{transform:translateY(6px);opacity:0.4;} }
 
   /* ---------- SECTION SPACING ---------- */
-  section.content-section { position: relative; padding: clamp(60px, 8vw, 100px) 0; }
+  section.content-section { padding: clamp(80px, 10vw, 140px) 0; }
   .section-head { max-width:640px; margin-bottom:50px; }
   .section-head .eyebrow { margin-bottom:14px; display:block; }
   .section-head h2 { font-size:clamp(2rem,4.4vw,3.2rem); color:var(--ivory); line-height:1.1; }
@@ -261,27 +219,6 @@
     font-family: 'Fraunces', serif; font-style: italic; font-size: 1.15rem;
     color: var(--marigold-glow); line-height: 1.4;
   }
-
-  /* ---------- VOICE ACCESSIBILITY ---------- */
-  .voice-grid { display:grid; grid-template-columns: 1fr 1fr; gap:50px; align-items:center; }
-  .voice-image { position:relative; border-radius: 20px; overflow:hidden; border: 1px solid rgba(242, 169, 59, 0.3); box-shadow: 0 24px 60px rgba(0,0,0,0.6); }
-  .voice-image img { width:100%; height:auto; display:block; transition: transform 0.6s ease; }
-  .voice-image:hover img { transform: scale(1.04); }
-  .voice-content h2 { font-size:clamp(2rem,3.5vw,2.6rem); line-height:1.15; margin-bottom:18px; color:var(--marigold-glow); }
-  .voice-content p.intro { font-size:1.1rem; color:var(--ivory); line-height:1.7; margin-bottom:32px; }
-  
-  .voice-steps { display:flex; flex-direction:column; gap:16px; margin-bottom:36px; }
-  .v-step { display:flex; gap:16px; align-items:flex-start; background:rgba(42, 4, 16, 0.6); padding:20px; border-radius:12px; border:1px solid rgba(242,169,59,0.15); transition: transform 0.3s ease; }
-  .v-step:hover { transform: translateY(-4px); border-color: rgba(242,169,59,0.4); }
-  .v-step .v-icon { width:36px; height:36px; flex-shrink:0; background:var(--marigold); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--burgundy-deep); font-weight:800; font-size:1.05rem; }
-  .v-step h4 { font-family:'Fraunces',serif; font-size:1.15rem; color:var(--marigold-soft); margin-bottom:4px; }
-  .v-step p { font-size:0.95rem; color:var(--ivory-muted); line-height:1.5; }
-  
-  .voice-benefits { background: linear-gradient(135deg, rgba(91,19,39,0.6) 0%, rgba(42,4,16,0.8) 100%); padding: 32px; border-radius: 16px; border: 1px solid rgba(242,169,59,0.2); }
-  .voice-benefits h3 { font-size: 1.4rem; color:var(--ivory); margin-bottom: 12px; }
-  .voice-benefits ul { list-style:none; }
-  .voice-benefits li { position:relative; padding-left:24px; margin-bottom:14px; font-size:0.95rem; color:var(--ivory-muted); line-height:1.5; }
-  .voice-benefits li::before { content:'✓'; position:absolute; left:0; top:0; color:var(--marigold); font-weight:bold; }
 
   /* ---------- VISION BOARD ---------- */
   .board-tag {
@@ -347,34 +284,6 @@
   }
   .fw-step h4 { font-size:1.2rem; margin-bottom:6px; color:var(--ivory); }
   .fw-step p { font-size:1rem; color:var(--ivory-muted); line-height:1.6; }
-
-  /* ---------- SERVICES BLUEPRINT ---------- */
-  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .service-card {
-    background: rgba(42, 4, 16, 0.65);
-    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(242, 169, 59, 0.15);
-    border-radius: 16px; padding: 32px 24px;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-  }
-  .service-card:hover { transform: translateY(-5px); border-color: rgba(242, 169, 59, 0.4); box-shadow: 0 12px 30px rgba(0,0,0,0.3); }
-  .service-card h3 { font-size: 1.25rem; color: var(--marigold); margin-bottom: 8px; line-height: 1.3; }
-  .service-card .service-desc { font-size: 0.9rem; color: rgba(226, 201, 179, 0.7); margin-bottom: 20px; font-style: italic; line-height: 1.5; }
-  .service-card ul { list-style: none; margin: 0; padding: 0; }
-  .service-card li {
-    font-size: 0.95rem; color: var(--ivory-muted); margin-bottom: 12px; line-height: 1.5;
-    position: relative; padding-left: 20px;
-  }
-  .service-card li::before { content: '✦'; position: absolute; left: 0; top: 1px; color: var(--marigold-soft); font-size: 0.8rem; }
-  
-  .service-card.full-width {
-    grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 2fr; gap: 32px;
-    background: linear-gradient(135deg, rgba(91,19,39,0.4) 0%, rgba(42,4,16,0.6) 100%);
-    align-items: start;
-  }
-  .platform-features { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  .feature-item h4 { font-family: 'Fraunces', serif; color: var(--ivory); font-size: 1.1rem; margin-bottom: 6px; }
-  .feature-item p { font-size: 0.9rem; color: var(--ivory-muted); line-height: 1.5; }
 
   /* ---------- SAFETY CARDS ---------- */
   .safety-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
@@ -455,28 +364,25 @@
   .footer-quote { font-family:'Fraunces',serif; font-style:italic; color:var(--marigold-soft); }
 
   /* ---------- MOBILE RESPONSIVENESS ---------- */
-  @media (max-width:1200px) {
-    .magical-angel { 
-      position: relative; top: auto !important; left: auto !important; right: auto !important; bottom: auto !important;
-      margin: 40px auto; flex-direction: column !important; text-align: center; max-width: 90%; animation: none; 
-    }
-    .angel-card { 
-      opacity: 1; transform: none; pointer-events: auto; position: relative; 
-      background: rgba(91,19,39,0.3); border-color: rgba(242,169,59,0.2); box-shadow: none; max-width: 100%; text-align: center;
-    }
-    .magical-angel.right-side .angel-card { transform: none; }
-  }
-
+  #mobile-menu-btn { display:none; background:none; border:none; color:var(--marigold); width:32px; height:32px; cursor:pointer; }
+  
   @media (max-width:960px) {
-    .manifesto-grid, .flywheel-grid, .voice-grid { grid-template-columns:1fr; gap: 48px; }
-    .pinboard, .services-grid { grid-template-columns:repeat(2,1fr); }
+    .manifesto-grid, .flywheel-grid { grid-template-columns:1fr; gap: 48px; }
+    .pinboard { grid-template-columns:repeat(2,1fr); }
     .safety-grid { grid-template-columns:repeat(2,1fr); }
-    .service-card.full-width { grid-template-columns: 1fr; }
   }
   @media (max-width:768px) {
-    .nav-links { display:none; }
+    #mobile-menu-btn { display:block; }
+    .nav-links { 
+      display:none; flex-direction:column; width:100%; gap:20px; 
+      position:absolute; top:100%; left:0; background:rgba(42, 4, 16, 0.95);
+      backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+      padding:24px; border-bottom:1px solid rgba(242,169,59,0.2);
+    }
+    .nav-links.active { display:flex; }
+    
     section.content-section { padding: 80px 0; }
-    .pinboard, .safety-grid, .services-grid, .platform-features { grid-template-columns:1fr; gap: 24px; }
+    .pinboard, .safety-grid { grid-template-columns:1fr; gap: 24px; }
     .wrap { padding: 0 24px; }
   }
   @media (max-width:540px) {
@@ -489,6 +395,15 @@
   }
   @media (prefers-reduced-motion: reduce) {
     * { animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
+  }
+  
+  /* Safari SVG Flexbox Fix */
+  .pin-card .icon-wrap svg,
+  .pin-card .icon-wrap img {
+      width: 24px !important;
+      height: 24px !important;
+      display: block;
+      flex-shrink: 0;
   }
 </style>
 </head>
@@ -512,13 +427,18 @@
         <circle cx="20" cy="24" r="7.5" fill="url(#sunGrad)"/>
         <path d="M2 32H38" stroke="#F7C877" stroke-width="1.6" stroke-linecap="round" opacity="0.8"/>
       </svg>
-      <span class="logo-word"><span style="color: var(--ivory)">her</span><span style="color: var(--marigold)">ise</span></span>
+      <span class="logo-word">herise</span>
     </div>
-    <div class="nav-links">
+    
+    <!-- Mobile Hamburger Button -->
+    <button id="mobile-menu-btn" aria-label="Toggle Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    </button>
+
+    <div class="nav-links" id="nav-links">
       <a href="#manifesto" class="link-item">Our Belief</a>
       <a href="#vision" class="link-item">Vision Board</a>
       <a href="#flywheel" class="link-item">How It Works</a>
-      <a href="#services" class="link-item">Services & Opportunities</a>
       <a href="#safety" class="link-item">Trust &amp; Safety</a>
       <a href="#join" class="nav-cta">Join the Circle</a>
     </div>
@@ -528,7 +448,7 @@
 <header class="hero">
   <!-- Sun rising animation now uses the logo itself -->
   <div class="hero-logo-wrap">
-    <svg viewBox="0 0 40 33.5" preserveAspectRatio="xMidYMax meet" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="sunGradHero" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stop-color="#F7C877"/>
@@ -543,7 +463,7 @@
   </div>
   <div class="hero-content">
     <span class="eyebrow">A WOMEN-FIRST ECONOMY</span>
-    <h1><span style="color: var(--ivory)">her</span><span style="color: var(--marigold)">ise</span></h1>
+    <h1>herise</h1>
     <p class="quote">"When she rises, everyone rises."</p>
     <p class="sub">A platform built by and for women — to earn, to sell, to move safely, and to hold each other up. One trusted circle at a time, starting close to home.</p>
     <div class="hero-ctas">
@@ -552,17 +472,15 @@
     </div>
   </div>
   <div class="scroll-cue"><span>scroll</span><span class="line"></span></div>
-
-
 </header>
 
 <section class="content-section manifesto" id="manifesto">
   <div class="wrap manifesto-grid">
     <div class="manifesto-text">
       <span class="eyebrow">OUR BELIEF</span>
-      <h2>Behind every product, every service, every order &mdash; there is a woman who showed up for another woman.</h2>
-      <p>A home cook selling tiffin boxes to fund her daughter's school fees. A retired teacher tutoring a neighbour's son for an hour of web design in return. A talented designer crafting logos to build her independent career from home.</p>
-      <p>Herise isn't just a marketplace. It's <em>a trust economy</em> &mdash; where a woman's word, her verified profile, and her community are worth more than any algorithm. We're building a world where economic independence is accessible, safe, and communal.</p>
+      <h2 style="margin:14px 0 26px;font-size:clamp(1.9rem,3.6vw,2.6rem);line-height:1.15;">Behind every product, every ride, every favour — there is a woman who showed up for another woman.</h2>
+      <p>A home cook selling tiffin boxes to fund her daughter's school fees. A retired teacher tutoring a neighbour's son for an hour of web design in return. A woman driving the same route every morning who now shares her seat, and her safety, with another.</p>
+      <p>Herise isn't just a marketplace. It's <em>a trust economy</em> — where a woman's word, her verified profile, and her community are worth more than any algorithm. We're building the one place where earning, buying, connecting, helping, and moving safely all live under a single promise: <em>you are never doing this alone.</em></p>
     </div>
     <div class="story-image">
       <img src="manifesto_story_1785677061907.jpg" alt="A smiling Indian woman working from home, beautifully crafting items">
@@ -571,62 +489,6 @@
       </div>
     </div>
   </div>
-
-
-</section>
-
-<section class="content-section voice-ai" id="accessibility">
-  <div class="wrap voice-grid">
-    <div class="voice-content">
-      <span class="eyebrow" style="margin-bottom:12px; display:inline-block;">BUILT FOR EVERYONE</span>
-      <h2>Just Speak! No Typing Needed.</h2>
-      <p class="intro">Starting your work online is now as easy as talking to a friend. You don't need to read long menus or type anything. Just speak in your mother tongue and the app will work!</p>
-      
-      <div class="voice-steps">
-        <div class="v-step">
-          <div class="v-icon">1</div>
-          <div>
-            <h4>Tap the Mic</h4>
-            <p>Look for the microphone button on your screen and press it.</p>
-          </div>
-        </div>
-        <div class="v-step">
-          <div class="v-icon">2</div>
-          <div>
-            <h4>Talk to Us</h4>
-            <p>Say what you want to do in your own language. Try saying, "I want to sell a dress," or "Help me find teaching work."</p>
-          </div>
-        </div>
-        <div class="v-step">
-          <div class="v-icon">3</div>
-          <div>
-            <h4>Watch It Happen</h4>
-            <p>The app will reply to you and open the right page for you automatically.</p>
-          </div>
-        </div>
-      </div>
-
-      <p style="font-size: 1.05rem; line-height: 1.6; color: var(--ivory-muted); font-style: italic;">Our new app listens and talks to you. Just tap the microphone and say, "I want to start working." It will guide you step-by-step to start your own tutoring or reselling business safely. Come join us and let your voice lead the way.</p>
-    </div>
-    
-    <div>
-      <div class="voice-image">
-        <img src="voice_feature.jpg" alt="Indian woman using voice AI feature to start her online business easily">
-      </div>
-      
-      <div class="voice-benefits" style="margin-top: 32px;">
-        <h3>Why You Will Love It</h3>
-        <p style="color:var(--marigold-soft); margin-bottom:16px; font-weight:600;">Made for Every Woman. We built this app so that nothing stands in your way — not even a language barrier.</p>
-        <ul>
-          <li><strong>No Tech Skills Needed:</strong> If you know how to talk on the phone, you know how to use our app. You never have to worry about clicking the wrong button.</li>
-          <li><strong>We Speak Your Language:</strong> You can do business comfortably in your mother tongue.</li>
-          <li><strong>Always Here to Help:</strong> If you ever feel stuck or lost in the app, just tap the mic and ask for help. A friendly voice will guide you back on track.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-
 </section>
 
 <section class="content-section vision-board" id="vision">
@@ -682,13 +544,12 @@
       </div>
     </div>
   </div>
-
 </section>
 
 <section class="content-section flywheel" id="flywheel">
   <div class="wrap flywheel-grid">
     <div class="fw-diagram">
-      <img src="flywheel_cycle.jpg" alt="A continuous golden loop representing the cycle of earning, trusting, spending, and connecting">
+      <img src="features_showcase_1785677075523.jpg" alt="A glowing abstract network representing digital community and safety">
     </div>
     <div class="fw-steps">
       <span class="eyebrow">HOW IT WORKS</span>
@@ -709,116 +570,6 @@
         <span class="fw-num">04</span>
         <div><h4>Connect</h4><p>She joins a local circle of women like her, and mentors the next woman just starting out.</p></div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="content-section services" id="services">
-  <div class="wrap">
-    <div class="section-head" style="max-width: 800px;">
-      <span class="board-tag">✦ THE HERISE PLATFORM</span>
-      <h2>Services & Opportunities</h2>
-      <p style="margin-bottom: 12px;"><strong>For Providers:</strong> A comprehensive ecosystem designed to let every woman monetize her unique skills from home. Whether you're teaching, creating, or connecting, there's a space for you here.</p>
-      <p><strong>For Buyers & Clients:</strong> A trusted, premium marketplace where you can discover authentic, high-quality services, handcrafted products, and expert consultations directly from verified women.</p>
-    </div>
-
-    <div class="services-grid">
-      <!-- 1 -->
-      <div class="service-card">
-        <h3>Computer & Digital Services</h3>
-        <p class="service-desc">Work on a laptop or smartphone for clients locally or globally.</p>
-        <ul>
-          <li><strong>Design & Branding:</strong> Logos, business cards, social media graphics, UI/UX designs.</li>
-          <li><strong>Social Media & Ads:</strong> Managing pages, targeted ad campaigns, growing audiences.</li>
-          <li><strong>Video & Audio:</strong> Editing short reels, YouTube videos, motion graphics, voiceovers.</li>
-          <li><strong>Writing & Translation:</strong> Blog writing, copywriting, product descriptions, regional translations.</li>
-          <li><strong>Website & Tech Help:</strong> Basic e-commerce setups (Shopify, WordPress), technical assist.</li>
-        </ul>
-      </div>
-      
-      <!-- 2 -->
-      <div class="service-card">
-        <h3>Teaching, Mentoring & Wellness</h3>
-        <p class="service-desc">Share expertise or offer health guidance through live video calls.</p>
-        <ul>
-          <li><strong>School Tuitions:</strong> Subject coaching for students across all grade levels.</li>
-          <li><strong>Skill Classes:</strong> 1-on-1 or group classes on niche subjects (stock market, coding, art).</li>
-          <li><strong>Language Coaching:</strong> Conversational English or regional language lessons.</li>
-          <li><strong>Fitness & Yoga:</strong> Live morning yoga, workout sessions, mindfulness coaching.</li>
-          <li><strong>Diet & Nutrition:</strong> Personalized meal plans, calorie tracking, nutrition coaching.</li>
-        </ul>
-      </div>
-
-      <!-- 3 -->
-      <div class="service-card">
-        <h3>Tailoring & Fashion Services</h3>
-        <p class="service-desc">Monetize sewing, dress design, and artisan handwork from home.</p>
-        <ul>
-          <li><strong>Stitching Orders:</strong> Custom garment stitching with door-to-door fabric pickup/delivery.</li>
-          <li><strong>Hand Embroidery:</strong> Artisan handwork (Aari, Zardosi, Maggam) on client fabrics.</li>
-          <li><strong>Fashion Consultations:</strong> Live video calls to advise on fabrics, necklines, styling.</li>
-        </ul>
-      </div>
-
-      <!-- 4 -->
-      <div class="service-card">
-        <h3>Home Foods & Shops</h3>
-        <p class="service-desc">Sell homemade products or run a digital storefront.</p>
-        <ul>
-          <li><strong>Homemade Foods:</strong> Pickles, spice masalas, papads, festive sweets, healthy meals.</li>
-          <li><strong>Handmade Crafts:</strong> Jewelry (terracotta, resin), candles, paintings, gift hampers.</li>
-          <li><strong>Reselling (Share & Earn):</strong> Curating products and earning commissions via WhatsApp.</li>
-          <li><strong>Digital Storefronts:</strong> Setting up an online shop to sell physical goods.</li>
-        </ul>
-      </div>
-
-      <!-- 5 -->
-      <div class="service-card">
-        <h3>Voice Companionship</h3>
-        <p class="service-desc">A safe, anonymous space offering friendly, empathetic conversation.</p>
-        <ul>
-          <li><strong>Empathetic Listening:</strong> Paid, non-judgmental phone conversations.</li>
-          <li><strong>Protected Anonymity:</strong> In-app phone masking ensures complete privacy.</li>
-        </ul>
-      </div>
-
-      <!-- 6 -->
-      <div class="service-card">
-        <h3>Astrology & Spiritual</h3>
-        <p class="service-desc">Traditional guidance through private voice or video calls.</p>
-        <ul>
-          <li><strong>Astrology & Horoscope:</strong> Personalized readings and birth chart analysis.</li>
-          <li><strong>Tarot & Numerology:</strong> Private sessions for personal or career guidance.</li>
-          <li><strong>Vastu Consultations:</strong> Space planning to improve energy flow in homes/offices.</li>
-        </ul>
-      </div>
-
-      <!-- 7 -->
-      <div class="service-card full-width">
-        <div>
-          <h3 style="font-size: 1.6rem;">Platform Features & Safety</h3>
-          <p class="service-desc" style="font-size: 1.05rem;">Core app capabilities designed to boost engagement, ensure security, and protect users.</p>
-        </div>
-        <div class="platform-features">
-          <div class="feature-item">
-            <h4>Shoppable Reels & Feed</h4>
-            <p>Short video reels and portfolio galleries to showcase craft process or products with direct "tap-to-buy" links.</p>
-          </div>
-          <div class="feature-item">
-            <h4>Guaranteed Escrow</h4>
-            <p>Upfront buyer payments held securely in escrow and released directly upon verified job delivery to prevent fraud.</p>
-          </div>
-          <div class="feature-item">
-            <h4>In-App Masked Chat</h4>
-            <p>Secure messaging with automatic contact masking to prevent transaction leaks and keep phone numbers hidden.</p>
-          </div>
-          <div class="feature-item">
-            <h4>Integrated AI Safety</h4>
-            <p>Background acoustic and sensor monitoring that calls SOS and broadcasts GPS if a user screams or throws their phone.</p>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -880,15 +631,13 @@
 
 <section class="cta" id="join">
   <div class="wrap">
-    <h2>Claim your place in the circle.</h2>
-    <p>We are building an ecosystem where women's ambitions are funded, protected, and celebrated. Step into a network designed exclusively for our shared rise.</p>
-    <form class="join-form" action="https://formsubmit.co/sabarinathanofficial02@gmail.com" method="POST">
-      <input type="email" name="email" placeholder="Enter your email address" required>
-      <input type="hidden" name="_subject" value="New Herise Invitation Request!">
-      <input type="text" name="_honey" style="display:none">
-      <button type="submit">Request an Invitation</button>
+    <h2>Rise with the women's economy.</h2>
+    <p>Join a global movement redefining how women earn, connect, and thrive. Claim your place in a network where every transaction builds trust and every connection empowers another.</p>
+    <form class="join-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='You\'re on the list ✓';">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Join the circle</button>
     </form>
-    <p class="form-note" style="font-size:0.9rem; margin-top:20px; color: rgba(226, 201, 179, 0.7);">Your privacy is sacred. Your details are kept safe, secure, and warmly guarded within our circle.</p>
+    <p style="font-size:0.9rem; margin-top:20px; opacity:0.8;">Your secure invitation to a safer, stronger network.</p>
   </div>
 </section>
 
@@ -908,13 +657,13 @@
           <circle cx="20" cy="24" r="7.5" fill="url(#sunGradFooter)"/>
           <path d="M2 32H38" stroke="#F7C877" stroke-width="1.6" stroke-linecap="round" opacity="0.8"/>
         </svg>
-        <span class="logo-word"><span style="color: var(--ivory)">her</span><span style="color: var(--marigold)">ise</span></span>
+        <span class="logo-word">herise</span>
       </div>
       <div class="footer-links">
         <a href="#manifesto">Our Belief</a>
+        <a href="#vision">Vision Board</a>
         <a href="#flywheel">How It Works</a>
-        <a href="#services">Services</a>
-        <a href="#safety">Safety</a>
+        <a href="#safety">Trust &amp; Safety</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -942,6 +691,21 @@
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 50);
   });
+  
+  // Mobile Menu Toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const navLinks = document.getElementById('nav-links');
+  mobileMenuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+  
+  // Close mobile menu when a link is clicked
+  const linkItems = document.querySelectorAll('.link-item, .nav-cta');
+  linkItems.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
 
   const revealTargets = document.querySelectorAll('.pin-card, .safety-card, .fw-step, .story-image');
   revealTargets.forEach(el => { el.style.opacity = 0; el.style.transform += ' translateY(20px)'; });
@@ -956,8 +720,6 @@
     });
   }, {threshold:0.12});
   revealTargets.forEach(el => io.observe(el));
-
-
 </script>
 </body>
 </html>
