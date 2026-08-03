@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary Meta Tags -->
+<title>Herise — When She Rises, Everyone Rises</title>
+<meta name="title" content="Herise — A Women-First Economy & Trust Ecosystem">
+<meta name="description" content="Herise is a premium, women-first trust economy where you can monetize your skills, discover handcrafted products, and connect in a safe, verified community.">
+<meta name="keywords" content="women empowerment, freelancing for women, women marketplace, safe community, work from home, handmade products, verified women network">
+<meta name="author" content="Herise">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://herise.com/">
+<meta property="og:title" content="Herise — When She Rises, Everyone Rises">
+<meta property="og:description" content="A platform built by and for women — to earn, to sell, to move safely, and to hold each other up. Claim your place in the circle.">
+<meta property="og:image" content="https://herise.com/hero_community_1785677048052.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://herise.com/">
+<meta property="twitter:title" content="Herise — When She Rises, Everyone Rises">
+<meta property="twitter:description" content="A platform built by and for women — to earn, to sell, to move safely, and to hold each other up. Claim your place in the circle.">
+<meta property="twitter:image" content="https://herise.com/hero_community_1785677048052.jpg">
+
+<!-- Advanced SEO & Crawling -->
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://herise.com/">
+<meta name="theme-color" content="#2A0410">
+
+<!-- Icons (Placeholders for when you upload icons) -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- Structured Data (JSON-LD) for Google Knowledge Graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Herise",
+  "url": "https://herise.com/",
+  "logo": "https://herise.com/hero_community_1785677048052.jpg",
+  "description": "Herise is a premium, women-first trust economy where you can monetize your skills, discover handcrafted products, and connect in a safe, verified community.",
+  "foundingDate": "2026"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;0,9..144,700;1,9..144,450;1,9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Rich Burgundy & Marigold Palette */
+    --burgundy-deep: #2A0410;
+    --burgundy: #5B1327;
+    --burgundy-light: #8E2344;
+    --marigold: #F2A93B;
+    --marigold-soft: #F7C877;
+    --marigold-glow: #FFD990;
+    --ivory: #FDF6EE;
+    --ivory-muted: #E2C9B3;
+  }
+  
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; background: var(--burgundy-deep); }
+  
+  body {
+    font-family:'Manrope',sans-serif;
+    color: var(--ivory);
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  /* Fixed Background Layers for flawless full-screen coverage */
+  #bg-gradient {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, var(--burgundy-deep) 0%, var(--burgundy) 50%, var(--burgundy-deep) 100%);
+    z-index: -2;
+  }
+
+  #stars {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+  #stars span {
+    position: absolute;
+    background: var(--marigold-soft);
+    border-radius: 50%;
+    animation: twinkle ease-in-out infinite;
+  }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.15; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.4); box-shadow: 0 0 10px 2px rgba(242,169,59,0.7); }
+  }
+
+  /* All major sections must span 100% of the viewport width */
+  nav, header, section, footer {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ---------- TYPOGRAPHY ---------- */
+  h1,h2,h3,.display {
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+  .eyebrow {
+    font-family:'Manrope',sans-serif;
+    font-weight:700;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    font-size:0.75rem;
+    color: var(--marigold);
+  }
+  a { color:inherit; text-decoration:none; }
+  img,svg { display:block; max-width:100%; }
+  
+  /* Container restricting inner content width but keeping backgrounds full width */
+  .wrap { max-width:1180px; margin:0 auto; padding:0 32px; width: 100%; }
+
+  /* ---------- NAV ---------- */
+  nav {
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    padding:20px 0;
+    transition:background .4s ease, padding .4s ease, box-shadow .4s ease;
+  }
+  nav .wrap { display:flex; align-items:center; justify-content:space-between; }
+  nav.scrolled {
+    background: rgba(42, 4, 16, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 12px 0;
+    box-shadow: 0 1px 0 rgba(242, 169, 59, 0.2);
+  }
+  .logo-mark { display:flex; align-items:center; gap:10px; }
+  .logo-mark svg { height:30px; width:auto; }
+  .logo-word { font-family:'Fraunces',serif; font-size:1.4rem; font-weight:600; color:var(--ivory); letter-spacing:-0.01em; }
+  
+  .nav-links { display:flex; gap:36px; align-items:center; }
+  .nav-links a.link-item {
+    font-size:0.9rem; font-weight:600; color:var(--ivory-muted);
+    transition:color .3s ease;
+  }
+  .nav-links a.link-item:hover, nav.scrolled .nav-links a.link-item:hover { color:var(--marigold-glow); }
+  .nav-cta {
+    padding:10px 24px; border-radius:100px;
+    background:var(--marigold); color:var(--burgundy-deep)!important;
+    font-weight:700; font-size:0.9rem;
+    box-shadow:0 4px 14px rgba(242,169,59,0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .nav-cta:hover { transform: translateY(-2px); box-shadow:0 6px 20px rgba(242,169,59,0.5); }
+
+  /* ---------- HERO ---------- */
+  header.hero {
+    position: relative;
+    min-height:100vh;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center;
+    padding:120px 24px 60px;
+    background: linear-gradient(180deg, transparent 0%, rgba(91, 19, 39, 0.4) 60%, rgba(242, 169, 59, 0.15) 100%);
+  }
+  
+  /* The animated rising logo */
+  .hero-logo-wrap {
+    position:absolute; left:50%; bottom: 0;
+    width: min(90vw, 750px); height:auto; transform:translateX(-50%);
+    animation:rise 2.4s cubic-bezier(.2,.8,.2,1) 0.3s both;
+    z-index: -1;
+    opacity: 0.25;
+    filter: drop-shadow(0 0 60px rgba(242,169,59,0.4));
+  }
+  .hero-logo-wrap svg { width: 100%; height: 100%; }
+
+  @keyframes rise {
+    from { transform:translateX(-50%) translateY(140px); opacity:0; }
+    to { transform:translateX(-50%) translateY(0); opacity: 0.25; }
+  }
+  
+  .hero-content { position:relative; z-index:5; width: 100%; max-width: 900px; margin: 0 auto; text-shadow: 0 4px 16px rgba(0,0,0,0.8); }
+  .hero .eyebrow { color:var(--marigold-glow); margin-bottom:22px; display:inline-block; }
+  .hero h1 {
+    font-size:clamp(3.2rem,8vw,6.5rem);
+    color:var(--ivory); line-height:1.05;
+    animation:fadeUp 1s ease .2s both;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  .hero .quote {
+    margin-top:22px; font-family:'Fraunces',serif; font-style:italic; font-weight:450;
+    font-size:clamp(1.2rem,2.6vw,1.7rem); color:var(--marigold-soft);
+    animation:fadeUp 1s ease .45s both;
+  }
+  .hero p.sub {
+    max-width:580px; margin:26px auto 0;
+    color:var(--ivory-muted); font-size:1.1rem; line-height:1.65;
+    animation:fadeUp 1s ease .6s both;
+  }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(18px);} to{opacity:1;transform:translateY(0);} }
+  
+  .hero-ctas {
+    margin-top:40px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap;
+    animation:fadeUp 1s ease .75s both;
+  }
+  .btn-primary {
+    padding:16px 32px; border-radius:100px;
+    background:var(--marigold); color:var(--burgundy-deep);
+    font-weight:700; font-size:1rem;
+    box-shadow:0 8px 24px rgba(242, 169, 59, 0.3);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .btn-primary:hover { transform:translateY(-2px); box-shadow:0 12px 28px rgba(242, 169, 59, 0.5); }
+  .btn-ghost {
+    padding:16px 32px; border-radius:100px;
+    border:1.5px solid rgba(253, 246, 238, 0.5); color:var(--ivory);
+    font-weight:600; font-size:1rem;
+    transition:background .25s ease, border-color .25s ease, color .25s ease;
+  }
+  .btn-ghost:hover { background:var(--marigold); border-color:var(--marigold); color:var(--burgundy-deep); }
+  
+  .scroll-cue {
+    position:absolute; bottom:28px; left:50%; transform:translateX(-50%);
+    color:var(--marigold-soft); font-size:0.75rem; letter-spacing:0.14em; text-transform:uppercase;
+    display:flex; flex-direction:column; align-items:center; gap:8px;
+    animation:fadeUp 1s ease 1s both;
+  }
+
+  /* ---------- SECTION SPACING ---------- */
+  section.content-section { position: relative; padding: clamp(60px, 8vw, 100px) 0; }
+  .section-head { max-width:640px; margin-bottom:50px; }
+  .section-head .eyebrow { margin-bottom:14px; display:block; }
+  .section-head h2 { font-size:clamp(2rem,4.4vw,3.2rem); color:var(--ivory); line-height:1.1; }
+  .section-head p { margin-top:18px; color:var(--ivory-muted); font-size:1.1rem; line-height:1.7; }
+
+  /* ---------- MANIFESTO ---------- */
+  .manifesto-grid { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
+  .manifesto-text p { font-size:1.15rem; line-height:1.8; color:var(--ivory-muted); margin-bottom:24px; }
+  .manifesto-text p em { font-style:italic; color:var(--marigold-glow); }
+  
+  .story-image {
+    position: relative; border-radius: 20px; overflow: hidden;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.6);
+  }
+  .story-image img {
+    width: 100%; height: auto; display: block;
+    transition: transform 0.6s ease;
+  }
+  .story-image:hover img { transform: scale(1.04); }
+  .story-caption {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, rgba(42,4,16,0.95) 10%, transparent);
+    padding: 60px 24px 24px;
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 1.15rem;
+    color: var(--marigold-glow); line-height: 1.4;
+  }
+
+  /* ---------- VOICE ACCESSIBILITY ---------- */
+  .voice-grid { display:grid; grid-template-columns: 1fr 1fr; gap:50px; align-items:center; }
+  .voice-image { position:relative; border-radius: 20px; overflow:hidden; border: 1px solid rgba(242, 169, 59, 0.3); box-shadow: 0 24px 60px rgba(0,0,0,0.6); }
+  .voice-image img { width:100%; height:auto; display:block; transition: transform 0.6s ease; }
+  .voice-image:hover img { transform: scale(1.04); }
+  .voice-content h2 { font-size:clamp(2rem,3.5vw,2.6rem); line-height:1.15; margin-bottom:18px; color:var(--marigold-glow); }
+  .voice-content p.intro { font-size:1.1rem; color:var(--ivory); line-height:1.7; margin-bottom:32px; }
+  
+  .voice-steps { display:flex; flex-direction:column; gap:16px; margin-bottom:36px; }
+  .v-step { display:flex; gap:16px; align-items:flex-start; background:rgba(42, 4, 16, 0.6); padding:20px; border-radius:12px; border:1px solid rgba(242,169,59,0.15); transition: transform 0.3s ease; }
+  .v-step:hover { transform: translateY(-4px); border-color: rgba(242,169,59,0.4); }
+  .v-step .v-icon { width:36px; height:36px; flex-shrink:0; background:var(--marigold); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--burgundy-deep); font-weight:800; font-size:1.05rem; }
+  .v-step h4 { font-family:'Fraunces',serif; font-size:1.15rem; color:var(--marigold-soft); margin-bottom:4px; }
+  .v-step p { font-size:0.95rem; color:var(--ivory-muted); line-height:1.5; }
+  
+  .voice-benefits { background: linear-gradient(135deg, rgba(91,19,39,0.6) 0%, rgba(42,4,16,0.8) 100%); padding: 32px; border-radius: 16px; border: 1px solid rgba(242,169,59,0.2); }
+  .voice-benefits h3 { font-size: 1.4rem; color:var(--ivory); margin-bottom: 12px; }
+  .voice-benefits ul { list-style:none; }
+  .voice-benefits li { position:relative; padding-left:24px; margin-bottom:14px; font-size:0.95rem; color:var(--ivory-muted); line-height:1.5; }
+  .voice-benefits li::before { content:'✓'; position:absolute; left:0; top:0; color:var(--marigold); font-weight:bold; }
+
+  /* ---------- VISION BOARD ---------- */
+  .board-tag {
+    display:inline-flex; align-items:center; gap:8px;
+    background:rgba(242,169,59,0.15); border:1px solid rgba(242,169,59,0.4);
+    color:var(--marigold-glow);
+    padding:8px 18px; border-radius:100px; font-size:0.8rem; font-weight:700;
+    margin-bottom:24px;
+  }
+  .pinboard {
+    display:grid; grid-template-columns:repeat(3,1fr); gap:34px 24px; padding-top:20px;
+  }
+  .pin-card {
+    background: rgba(42, 4, 16, 0.65);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(242, 169, 59, 0.15); border-radius:12px;
+    padding:32px 28px 28px;
+    box-shadow:0 18px 40px rgba(0,0,0,0.4); position:relative;
+    transition:transform .35s ease, box-shadow .35s ease;
+  }
+  .pin-card:nth-child(1){transform:rotate(-2deg);}
+  .pin-card:nth-child(2){transform:rotate(1deg);}
+  .pin-card:nth-child(3){transform:rotate(-1deg);}
+  .pin-card:nth-child(4){transform:rotate(1.5deg);}
+  .pin-card:nth-child(5){transform:rotate(-1.5deg);}
+  .pin-card:nth-child(6){transform:rotate(1deg);}
+  .pin-card:hover{transform:rotate(0deg) translateY(-8px) scale(1.02); box-shadow:0 24px 50px rgba(0,0,0,0.6);}
+  
+  .pin {
+    position:absolute; top:-10px; left:50%; transform:translateX(-50%);
+    width:20px; height:20px; border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, #fff, var(--marigold) 60%, #b37315);
+    box-shadow:0 3px 8px rgba(0,0,0,0.7);
+  }
+  .pin-card .icon-wrap {
+    width:50px; height:50px; border-radius:14px;
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:20px; background: rgba(242, 169, 59, 0.15);
+  }
+  .pin-card h3 { font-size:1.3rem; margin-bottom:10px; color:var(--marigold); }
+  .pin-card p { font-size:0.95rem; line-height:1.6; color:var(--ivory-muted); }
+  .pin-card .status {
+    display:inline-block; margin-top:16px;
+    font-size:0.7rem; font-weight:800; letter-spacing:0.08em; text-transform:uppercase;
+    padding:5px 12px; border-radius:100px;
+  }
+  .status.now { background:rgba(242,169,59,0.2); color:var(--marigold-glow); }
+  .status.next { background:rgba(142,35,68,0.5); color:var(--marigold-soft); }
+  .status.later { background:rgba(253,246,238,0.1); color:var(--ivory); }
+
+  /* ---------- FLYWHEEL ---------- */
+  .flywheel-grid { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
+  .fw-diagram img {
+    width: 100%; height: auto; border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(242,169,59,0.15);
+    border: 1px solid rgba(242,169,59,0.3);
+  }
+  .fw-steps { display:flex; flex-direction:column; gap:26px; }
+  .fw-step { display:flex; gap:20px; align-items:flex-start; }
+  .fw-num {
+    font-family:'Fraunces',serif; font-size:1.7rem; font-weight:600; color:var(--marigold);
+    width:44px; flex-shrink:0; border-bottom: 2px solid rgba(242,169,59,0.3); padding-bottom: 5px;
+  }
+  .fw-step h4 { font-size:1.2rem; margin-bottom:6px; color:var(--ivory); }
+  .fw-step p { font-size:1rem; color:var(--ivory-muted); line-height:1.6; }
+
+  /* ---------- SERVICES BLUEPRINT ---------- */
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .service-card {
+    background: rgba(42, 4, 16, 0.65);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(242, 169, 59, 0.15);
+    border-radius: 16px; padding: 32px 24px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  .service-card:hover { transform: translateY(-5px); border-color: rgba(242, 169, 59, 0.4); box-shadow: 0 12px 30px rgba(0,0,0,0.3); }
+  .service-card h3 { font-size: 1.25rem; color: var(--marigold); margin-bottom: 8px; line-height: 1.3; }
+  .service-card .service-desc { font-size: 0.9rem; color: rgba(226, 201, 179, 0.7); margin-bottom: 20px; font-style: italic; line-height: 1.5; }
+  .service-card ul { list-style: none; margin: 0; padding: 0; }
+  .service-card li {
+    font-size: 0.95rem; color: var(--ivory-muted); margin-bottom: 12px; line-height: 1.5;
+    position: relative; padding-left: 20px;
+  }
+  .service-card li::before { content: '✦'; position: absolute; left: 0; top: 1px; color: var(--marigold-soft); font-size: 0.8rem; }
+  
+  .service-card.full-width {
+    grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 2fr; gap: 32px;
+    background: linear-gradient(135deg, rgba(91,19,39,0.4) 0%, rgba(42,4,16,0.6) 100%);
+    align-items: start;
+  }
+  .platform-features { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .feature-item h4 { font-family: 'Fraunces', serif; color: var(--ivory); font-size: 1.1rem; margin-bottom: 6px; }
+  .feature-item p { font-size: 0.9rem; color: var(--ivory-muted); line-height: 1.5; }
+
+  /* ---------- SAFETY CARDS ---------- */
+  .safety-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+  .safety-card {
+    background:rgba(91, 19, 39, 0.4);
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    border:1px solid rgba(242, 169, 59, 0.2);
+    border-radius:16px; 
+    overflow:hidden;
+    display: flex; flex-direction: column;
+  }
+  .card-image-wrap {
+    width: 100%; height: 140px;
+    background: rgba(42, 4, 16, 0.8);
+    overflow: hidden;
+  }
+  .card-image-wrap img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  .safety-card:hover .card-image-wrap img {
+    transform: scale(1.05);
+  }
+  .safety-card-content {
+    padding: 24px;
+  }
+  .safety-card h4 { font-size:1.05rem; margin-bottom:10px; font-family:'Fraunces',serif; font-weight:600; color:var(--marigold-soft); }
+  .safety-card p { font-size:0.9rem; line-height:1.6; color:var(--ivory-muted); }
+
+  /* ---------- IMAGE BANNER & CTA ---------- */
+  .image-banner {
+    width: 100%; height: clamp(280px, 35vw, 450px);
+    overflow: hidden; position: relative;
+    border-top: 1px solid rgba(242,169,59,0.2);
+  }
+  .image-banner img {
+    width: 100%; height: 100%; object-fit: cover; object-position: center 20%;
+    mask-image: linear-gradient(to bottom, black 50%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent);
+  }
+
+  .cta {
+    background: linear-gradient(180deg, transparent, rgba(91,19,39,0.8) 30%, rgba(42,4,16,1));
+    text-align:center; padding: 40px 0 120px;
+    margin-top: -100px;
+  }
+  .cta h2 { font-size:clamp(2.4rem,5vw,3.6rem); margin-bottom:20px; color:var(--ivory); }
+  .cta p { max-width:540px; margin:0 auto 36px; font-size:1.1rem; color:var(--ivory-muted); line-height: 1.6; }
+  .join-form { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; max-width:500px; margin:0 auto; }
+  .join-form input {
+    flex:1; min-width:240px; padding:18px 24px; border-radius:100px;
+    border: 1px solid rgba(242, 169, 59, 0.4);
+    background: rgba(42, 4, 16, 0.6); color: var(--ivory);
+    font-family:'Manrope',sans-serif; font-size:1rem;
+  }
+  .join-form input::placeholder { color:var(--ivory-muted); }
+  .join-form button {
+    padding:18px 32px; border-radius:100px; border:none; 
+    background:var(--marigold); color:var(--burgundy-deep);
+    font-weight:700; font-size:1rem; cursor:pointer; transition:transform .2s ease;
+  }
+  .join-form button:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(242,169,59,0.4); }
+  .form-note { margin-top:20px; font-size:0.85rem; color:rgba(226, 201, 179, 0.6); }
+
+  /* ---------- FOOTER ---------- */
+  footer { 
+    background:rgba(18, 2, 7, 0.8); padding:60px 0 40px; 
+    border-top: 1px solid rgba(242, 169, 59, 0.15); 
+  }
+  .footer-top { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:30px; margin-bottom:40px; }
+  .footer-links { display:flex; gap:32px; flex-wrap:wrap; }
+  .footer-links a { font-size:0.9rem; font-weight: 500; color:var(--ivory-muted); }
+  .footer-links a:hover { color:var(--marigold); }
+  .footer-bottom {
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px;
+    border-top:1px solid rgba(242,169,59,0.15); padding-top:24px; font-size:0.85rem; color: rgba(226, 201, 179, 0.6);
+  }
+  .footer-quote { font-family:'Fraunces',serif; font-style:italic; color:var(--marigold-soft); }
+
+  /* ---------- MOBILE RESPONSIVENESS ---------- */
+  @media (max-width:1200px) {
+    .magical-angel { 
+      position: relative; top: auto !important; left: auto !important; right: auto !important; bottom: auto !important;
+      margin: 40px auto; flex-direction: column !important; text-align: center; max-width: 90%; animation: none; 
+    }
+    .angel-card { 
+      opacity: 1; transform: none; pointer-events: auto; position: relative; 
+      background: rgba(91,19,39,0.3); border-color: rgba(242,169,59,0.2); box-shadow: none; max-width: 100%; text-align: center;
+    }
+    .magical-angel.right-side .angel-card { transform: none; }
+  }
+
+  @media (max-width:960px) {
+    .manifesto-grid, .flywheel-grid, .voice-grid { grid-template-columns:1fr; gap: 48px; }
+    .pinboard, .services-grid { grid-template-columns:repeat(2,1fr); }
+    .safety-grid { grid-template-columns:repeat(2,1fr); }
+    .service-card.full-width { grid-template-columns: 1fr; }
+  }
+  @media (max-width:768px) {
+    .nav-links { display:none; }
+    section.content-section { padding: 80px 0; }
+    .pinboard, .safety-grid, .services-grid, .platform-features { grid-template-columns:1fr; gap: 24px; }
+    .wrap { padding: 0 24px; }
+  }
+  @media (max-width:540px) {
+    .hero { padding: 120px 20px 60px; }
+    .story-caption { padding: 40px 16px 16px; font-size: 1rem; }
+    .fw-step { gap: 16px; }
+    .cta { padding-bottom: 80px; }
+    .join-form input, .join-form button { width: 100%; flex: none; }
+    .footer-top { flex-direction: column; align-items: flex-start; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
+  }
+</style>
+</head>
+<body>
+
+<div id="bg-gradient"></div>
+<div id="stars"></div>
+
+<nav id="nav">
+  <div class="wrap">
+    <div class="logo-mark">
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sunGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#F7C877"/>
+            <stop offset="55%" stop-color="#F2A93B"/>
+            <stop offset="100%" stop-color="#8E2344"/>
+          </linearGradient>
+        </defs>
+        <path d="M4 26C4 15 11 7 20 7C29 7 36 15 36 26" stroke="url(#sunGrad)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+        <circle cx="20" cy="24" r="7.5" fill="url(#sunGrad)"/>
+        <path d="M2 32H38" stroke="#F7C877" stroke-width="1.6" stroke-linecap="round" opacity="0.8"/>
+      </svg>
+      <span class="logo-word"><span style="color: var(--ivory)">her</span><span style="color: var(--marigold)">ise</span></span>
+    </div>
+    <div class="nav-links">
+      <a href="#manifesto" class="link-item">Our Belief</a>
+      <a href="#vision" class="link-item">Vision Board</a>
+      <a href="#flywheel" class="link-item">How It Works</a>
+      <a href="#services" class="link-item">Services & Opportunities</a>
+      <a href="#safety" class="link-item">Trust &amp; Safety</a>
+      <a href="#join" class="nav-cta">Join the Circle</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <!-- Sun rising animation now uses the logo itself -->
+  <div class="hero-logo-wrap">
+    <svg viewBox="0 0 40 33.5" preserveAspectRatio="xMidYMax meet" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sunGradHero" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#F7C877"/>
+          <stop offset="55%" stop-color="#F2A93B"/>
+          <stop offset="100%" stop-color="#8E2344"/>
+        </linearGradient>
+      </defs>
+      <path d="M4 26C4 15 11 7 20 7C29 7 36 15 36 26" stroke="url(#sunGradHero)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      <circle cx="20" cy="24" r="7.5" fill="url(#sunGradHero)"/>
+      <path d="M2 32H38" stroke="#F7C877" stroke-width="1.6" stroke-linecap="round" opacity="0.8"/>
+    </svg>
+  </div>
+  <div class="hero-content">
+    <span class="eyebrow">A WOMEN-FIRST ECONOMY</span>
+    <h1><span style="color: var(--ivory)">her</span><span style="color: var(--marigold)">ise</span></h1>
+    <p class="quote">"When she rises, everyone rises."</p>
+    <p class="sub">A platform built by and for women — to earn, to sell, to move safely, and to hold each other up. One trusted circle at a time, starting close to home.</p>
+    <div class="hero-ctas">
+      <a href="#join" class="btn-primary">Join the first circle</a>
+      <a href="#vision" class="btn-ghost">See the vision</a>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>scroll</span><span class="line"></span></div>
+
+
+</header>
+
+<section class="content-section manifesto" id="manifesto">
+  <div class="wrap manifesto-grid">
+    <div class="manifesto-text">
+      <span class="eyebrow">OUR BELIEF</span>
+      <h2>Behind every product, every service, every order &mdash; there is a woman who showed up for another woman.</h2>
+      <p>A home cook selling tiffin boxes to fund her daughter's school fees. A retired teacher tutoring a neighbour's son for an hour of web design in return. A talented designer crafting logos to build her independent career from home.</p>
+      <p>Herise isn't just a marketplace. It's <em>a trust economy</em> &mdash; where a woman's word, her verified profile, and her community are worth more than any algorithm. We're building a world where economic independence is accessible, safe, and communal.</p>
+    </div>
+    <div class="story-image">
+      <img src="manifesto_story_1785677061907.jpg" alt="A smiling Indian woman working from home, beautifully crafting items">
+      <div class="story-caption">
+        "This bag was stitched by Lakshmi, working from her front room in Madurai — one order, one rising morning at a time."
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+<section class="content-section voice-ai" id="accessibility">
+  <div class="wrap voice-grid">
+    <div class="voice-content">
+      <span class="eyebrow" style="margin-bottom:12px; display:inline-block;">BUILT FOR EVERYONE</span>
+      <h2>Just Speak! No Typing Needed.</h2>
+      <p class="intro">Starting your work online is now as easy as talking to a friend. You don't need to read long menus or type anything. Just speak in your mother tongue and the app will work!</p>
+      
+      <div class="voice-steps">
+        <div class="v-step">
+          <div class="v-icon">1</div>
+          <div>
+            <h4>Tap the Mic</h4>
+            <p>Look for the microphone button on your screen and press it.</p>
+          </div>
+        </div>
+        <div class="v-step">
+          <div class="v-icon">2</div>
+          <div>
+            <h4>Talk to Us</h4>
+            <p>Say what you want to do in your own language. Try saying, "I want to sell a dress," or "Help me find teaching work."</p>
+          </div>
+        </div>
+        <div class="v-step">
+          <div class="v-icon">3</div>
+          <div>
+            <h4>Watch It Happen</h4>
+            <p>The app will reply to you and open the right page for you automatically.</p>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size: 1.05rem; line-height: 1.6; color: var(--ivory-muted); font-style: italic;">Our new app listens and talks to you. Just tap the microphone and say, "I want to start working." It will guide you step-by-step to start your own tutoring or reselling business safely. Come join us and let your voice lead the way.</p>
+    </div>
+    
+    <div>
+      <div class="voice-image">
+        <img src="voice_feature.jpg" alt="Indian woman using voice AI feature to start her online business easily">
+      </div>
+      
+      <div class="voice-benefits" style="margin-top: 32px;">
+        <h3>Why You Will Love It</h3>
+        <p style="color:var(--marigold-soft); margin-bottom:16px; font-weight:600;">Made for Every Woman. We built this app so that nothing stands in your way — not even a language barrier.</p>
+        <ul>
+          <li><strong>No Tech Skills Needed:</strong> If you know how to talk on the phone, you know how to use our app. You never have to worry about clicking the wrong button.</li>
+          <li><strong>We Speak Your Language:</strong> You can do business comfortably in your mother tongue.</li>
+          <li><strong>Always Here to Help:</strong> If you ever feel stuck or lost in the app, just tap the mic and ask for help. A friendly voice will guide you back on track.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+<section class="content-section vision-board" id="vision">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="board-tag">✦ PINNED FOR THE ROAD AHEAD</span>
+      <h2>The Vision Board</h2>
+      <p>This is the platform we're building toward — an A-to-Z world for women, pinned up one piece at a time. Not everything launches on day one. Here's where we're headed, and what comes first.</p>
+    </div>
+
+    <div class="pinboard">
+      <div class="pin-card">
+        <div class="pin"></div>
+        <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#F7C877" stroke-width="1.8"><path d="M12 2v20M6 8l6-6 6 6M6 16l6 6 6-6"/></svg></div>
+        <h3>Earn</h3>
+        <p>Freelancing, tutoring, tailoring, calls, cooking — find work sized to the hours you actually have today.</p>
+        <span class="status now">Launching first</span>
+      </div>
+      <div class="pin-card">
+        <div class="pin"></div>
+        <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#F2A93B" stroke-width="1.8"><path d="M3 9l1-5h16l1 5M4 9h16v10a1 1 0 01-1 1H5a1 1 0 01-1-1V9zM9 13a3 3 0 006 0"/></svg></div>
+        <h3>Buy</h3>
+        <p>Story-led marketplace for women-made food, crafts, and services — every listing names the woman behind it.</p>
+        <span class="status now">Launching first</span>
+      </div>
+      <div class="pin-card">
+        <div class="pin"></div>
+        <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#F7C877" stroke-width="1.8"><path d="M17 20h-2v-2H9v2H7v-2H2v-1a4 4 0 014-4h12a4 4 0 014 4v1h-5v-2M8 12V8a4 4 0 018 0v4"/></svg></div>
+        <h3>Connect</h3>
+        <p>Local groups and reels that turn "I made this" into discovery, trust, and your next customer.</p>
+        <span class="status now">Launching first</span>
+      </div>
+      <div class="pin-card">
+        <div class="pin"></div>
+        <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#F7C877" stroke-width="1.8"><path d="M12 21s-7-4.35-9.5-8.5C.7 8.4 3 4 7 4c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 4 0 6.3 4.4 4.5 8.5C19 16.65 12 21 12 21z"/></svg></div>
+        <h3>Help</h3>
+        <p>Post a need — a school run, a hospital visit, a hand finding work — and a verified woman nearby answers.</p>
+        <span class="status next">Coming next</span>
+      </div>
+      <div class="pin-card">
+        <div class="pin"></div>
+        <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#F2A93B" stroke-width="1.8"><path d="M5 17h14M5 17a2 2 0 100 4 2 2 0 000-4zm14 0a2 2 0 100 4 2 2 0 000-4zM5 17V7a2 2 0 012-2h6l4 4h2a2 2 0 012 2v6"/></svg></div>
+        <h3>Move</h3>
+        <p>Woman-to-woman rides on shared routes — the same commute, a familiar face, a safer way there.</p>
+        <span class="status next">Coming next</span>
+      </div>
+      <div class="pin-card">
+        <div class="pin"></div>
+        <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#F7C877" stroke-width="1.8"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg></div>
+        <h3>Protect</h3>
+        <p>Verification, escrow, and a quiet AI safety layer watching for scams and harassment — always on, never loud.</p>
+        <span class="status later">Woven throughout</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="content-section flywheel" id="flywheel">
+  <div class="wrap flywheel-grid">
+    <div class="fw-diagram">
+      <img src="flywheel_cycle.jpg" alt="A continuous golden loop representing the cycle of earning, trusting, spending, and connecting">
+    </div>
+    <div class="fw-steps">
+      <span class="eyebrow">HOW IT WORKS</span>
+      <h2 style="font-size:clamp(1.9rem,3.6vw,2.6rem);margin:10px 0 20px;">A circle that keeps turning</h2>
+      <div class="fw-step">
+        <span class="fw-num">01</span>
+        <div><h4>Earn</h4><p>A woman joins to offer a skill — tutoring, tailoring, translation, a spare afternoon.</p></div>
+      </div>
+      <div class="fw-step">
+        <span class="fw-num">02</span>
+        <div><h4>Trust</h4><p>She builds a verified profile, and reviews from other women turn her name into her reputation.</p></div>
+      </div>
+      <div class="fw-step">
+        <span class="fw-num">03</span>
+        <div><h4>Spend</h4><p>With what she earns, she buys from another woman on Herise — pickles, a portrait, a plumbing fix.</p></div>
+      </div>
+      <div class="fw-step">
+        <span class="fw-num">04</span>
+        <div><h4>Connect</h4><p>She joins a local circle of women like her, and mentors the next woman just starting out.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section services" id="services">
+  <div class="wrap">
+    <div class="section-head" style="max-width: 800px;">
+      <span class="board-tag">✦ THE HERISE PLATFORM</span>
+      <h2>Services & Opportunities</h2>
+      <p style="margin-bottom: 12px;"><strong>For Providers:</strong> A comprehensive ecosystem designed to let every woman monetize her unique skills from home. Whether you're teaching, creating, or connecting, there's a space for you here.</p>
+      <p><strong>For Buyers & Clients:</strong> A trusted, premium marketplace where you can discover authentic, high-quality services, handcrafted products, and expert consultations directly from verified women.</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- 1 -->
+      <div class="service-card">
+        <h3>Computer & Digital Services</h3>
+        <p class="service-desc">Work on a laptop or smartphone for clients locally or globally.</p>
+        <ul>
+          <li><strong>Design & Branding:</strong> Logos, business cards, social media graphics, UI/UX designs.</li>
+          <li><strong>Social Media & Ads:</strong> Managing pages, targeted ad campaigns, growing audiences.</li>
+          <li><strong>Video & Audio:</strong> Editing short reels, YouTube videos, motion graphics, voiceovers.</li>
+          <li><strong>Writing & Translation:</strong> Blog writing, copywriting, product descriptions, regional translations.</li>
+          <li><strong>Website & Tech Help:</strong> Basic e-commerce setups (Shopify, WordPress), technical assist.</li>
+        </ul>
+      </div>
+      
+      <!-- 2 -->
+      <div class="service-card">
+        <h3>Teaching, Mentoring & Wellness</h3>
+        <p class="service-desc">Share expertise or offer health guidance through live video calls.</p>
+        <ul>
+          <li><strong>School Tuitions:</strong> Subject coaching for students across all grade levels.</li>
+          <li><strong>Skill Classes:</strong> 1-on-1 or group classes on niche subjects (stock market, coding, art).</li>
+          <li><strong>Language Coaching:</strong> Conversational English or regional language lessons.</li>
+          <li><strong>Fitness & Yoga:</strong> Live morning yoga, workout sessions, mindfulness coaching.</li>
+          <li><strong>Diet & Nutrition:</strong> Personalized meal plans, calorie tracking, nutrition coaching.</li>
+        </ul>
+      </div>
+
+      <!-- 3 -->
+      <div class="service-card">
+        <h3>Tailoring & Fashion Services</h3>
+        <p class="service-desc">Monetize sewing, dress design, and artisan handwork from home.</p>
+        <ul>
+          <li><strong>Stitching Orders:</strong> Custom garment stitching with door-to-door fabric pickup/delivery.</li>
+          <li><strong>Hand Embroidery:</strong> Artisan handwork (Aari, Zardosi, Maggam) on client fabrics.</li>
+          <li><strong>Fashion Consultations:</strong> Live video calls to advise on fabrics, necklines, styling.</li>
+        </ul>
+      </div>
+
+      <!-- 4 -->
+      <div class="service-card">
+        <h3>Home Foods & Shops</h3>
+        <p class="service-desc">Sell homemade products or run a digital storefront.</p>
+        <ul>
+          <li><strong>Homemade Foods:</strong> Pickles, spice masalas, papads, festive sweets, healthy meals.</li>
+          <li><strong>Handmade Crafts:</strong> Jewelry (terracotta, resin), candles, paintings, gift hampers.</li>
+          <li><strong>Reselling (Share & Earn):</strong> Curating products and earning commissions via WhatsApp.</li>
+          <li><strong>Digital Storefronts:</strong> Setting up an online shop to sell physical goods.</li>
+        </ul>
+      </div>
+
+      <!-- 5 -->
+      <div class="service-card">
+        <h3>Voice Companionship</h3>
+        <p class="service-desc">A safe, anonymous space offering friendly, empathetic conversation.</p>
+        <ul>
+          <li><strong>Empathetic Listening:</strong> Paid, non-judgmental phone conversations.</li>
+          <li><strong>Protected Anonymity:</strong> In-app phone masking ensures complete privacy.</li>
+        </ul>
+      </div>
+
+      <!-- 6 -->
+      <div class="service-card">
+        <h3>Astrology & Spiritual</h3>
+        <p class="service-desc">Traditional guidance through private voice or video calls.</p>
+        <ul>
+          <li><strong>Astrology & Horoscope:</strong> Personalized readings and birth chart analysis.</li>
+          <li><strong>Tarot & Numerology:</strong> Private sessions for personal or career guidance.</li>
+          <li><strong>Vastu Consultations:</strong> Space planning to improve energy flow in homes/offices.</li>
+        </ul>
+      </div>
+
+      <!-- 7 -->
+      <div class="service-card full-width">
+        <div>
+          <h3 style="font-size: 1.6rem;">Platform Features & Safety</h3>
+          <p class="service-desc" style="font-size: 1.05rem;">Core app capabilities designed to boost engagement, ensure security, and protect users.</p>
+        </div>
+        <div class="platform-features">
+          <div class="feature-item">
+            <h4>Shoppable Reels & Feed</h4>
+            <p>Short video reels and portfolio galleries to showcase craft process or products with direct "tap-to-buy" links.</p>
+          </div>
+          <div class="feature-item">
+            <h4>Guaranteed Escrow</h4>
+            <p>Upfront buyer payments held securely in escrow and released directly upon verified job delivery to prevent fraud.</p>
+          </div>
+          <div class="feature-item">
+            <h4>In-App Masked Chat</h4>
+            <p>Secure messaging with automatic contact masking to prevent transaction leaks and keep phone numbers hidden.</p>
+          </div>
+          <div class="feature-item">
+            <h4>Integrated AI Safety</h4>
+            <p>Background acoustic and sensor monitoring that calls SOS and broadcasts GPS if a user screams or throws their phone.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="content-section safety" id="safety">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">TRUST &amp; SAFETY</span>
+      <h2>The invisible layer, always on</h2>
+      <p>Safety isn't a feature you notice — it's the reason you never have to think twice. Every corner of Herise is built around it.</p>
+    </div>
+    <div class="safety-grid">
+      <div class="safety-card">
+        <div class="card-image-wrap">
+          <img src="safety_verified_1785677487410.jpg" alt="Verified shield">
+        </div>
+        <div class="safety-card-content">
+          <h4>Verified, always</h4>
+          <p>ID and video checks, plus a referral from an existing member before anyone joins the circle.</p>
+        </div>
+      </div>
+      
+      <div class="safety-card">
+        <div class="card-image-wrap">
+          <img src="safety_map_1785677502562.jpg" alt="Map pin showing safe zones">
+        </div>
+        <div class="safety-card-content">
+          <h4>Pink Zones</h4>
+          <p>See where verified women are near you — a visible map of a safer neighbourhood, always in view.</p>
+        </div>
+      </div>
+      
+      <div class="safety-card">
+        <div class="card-image-wrap">
+          <img src="safety_shadow_1785677516862.jpg" alt="Shadow mode radar">
+        </div>
+        <div class="safety-card-content">
+          <h4>Shadow mode</h4>
+          <p>On a call, a ride, or a visit — a quiet watch on the details that matter, ready to step in if needed.</p>
+        </div>
+      </div>
+      
+      <div class="safety-card">
+        <div class="card-image-wrap">
+          <img src="features_showcase_1785677075523.jpg" alt="Escrow network protection">
+        </div>
+        <div class="safety-card-content">
+          <h4>Escrow payments</h4>
+          <p>Money stays held until both sides confirm the work is done — no one pays on a promise alone.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="image-banner">
+  <img src="hero_community_1785677048052.jpg" alt="A diverse group of women standing in a circle under a glowing sky">
+</section>
+
+<section class="cta" id="join">
+  <div class="wrap">
+    <h2>Claim your place in the circle.</h2>
+    <p>We are building an ecosystem where women's ambitions are funded, protected, and celebrated. Step into a network designed exclusively for our shared rise.</p>
+    <form class="join-form" action="https://formsubmit.co/sabarinathanofficial02@gmail.com" method="POST">
+      <input type="email" name="email" placeholder="Enter your email address" required>
+      <input type="hidden" name="_subject" value="New Herise Invitation Request!">
+      <input type="text" name="_honey" style="display:none">
+      <button type="submit">Request an Invitation</button>
+    </form>
+    <p class="form-note" style="font-size:0.9rem; margin-top:20px; color: rgba(226, 201, 179, 0.7);">Your privacy is sacred. Your details are kept safe, secure, and warmly guarded within our circle.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="logo-mark">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="sunGradFooter" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#F7C877"/>
+              <stop offset="55%" stop-color="#F2A93B"/>
+              <stop offset="100%" stop-color="#8E2344"/>
+            </linearGradient>
+          </defs>
+          <path d="M4 26C4 15 11 7 20 7C29 7 36 15 36 26" stroke="url(#sunGradFooter)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+          <circle cx="20" cy="24" r="7.5" fill="url(#sunGradFooter)"/>
+          <path d="M2 32H38" stroke="#F7C877" stroke-width="1.6" stroke-linecap="round" opacity="0.8"/>
+        </svg>
+        <span class="logo-word"><span style="color: var(--ivory)">her</span><span style="color: var(--marigold)">ise</span></span>
+      </div>
+      <div class="footer-links">
+        <a href="#manifesto">Our Belief</a>
+        <a href="#flywheel">How It Works</a>
+        <a href="#services">Services</a>
+        <a href="#safety">Safety</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Herise. Built with, and for, women.</span>
+      <span class="footer-quote">"When she rises, everyone rises."</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const starsEl = document.getElementById('stars');
+  for(let i=0; i<90; i++) {
+    const s = document.createElement('span');
+    const size = Math.random() * 2 + 1.5; 
+    s.style.width = size + 'px';
+    s.style.height = size + 'px';
+    s.style.left = Math.random() * 100 + 'vw';
+    s.style.top = Math.random() * 100 + 'vh';
+    s.style.animationDuration = (Math.random() * 2 + 2) + 's';
+    s.style.animationDelay = (Math.random() * 4) + 's';
+    starsEl.appendChild(s);
+  }
+
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  const revealTargets = document.querySelectorAll('.pin-card, .safety-card, .fw-step, .story-image');
+  revealTargets.forEach(el => { el.style.opacity = 0; el.style.transform += ' translateY(20px)'; });
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.style.transition = 'opacity .7s ease, transform .7s ease';
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = entry.target.style.transform.replace(' translateY(20px)', '');
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.12});
+  revealTargets.forEach(el => io.observe(el));
+
+
+</script>
+</body>
+</html>
