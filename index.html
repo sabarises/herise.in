@@ -142,9 +142,10 @@
     box-shadow: 0 1px 0 rgba(242, 169, 59, 0.2);
   }
   .logo-mark { display:flex; align-items:center; gap:10px; }
-  .logo-mark svg { height:30px; width:auto; }
+  .logo-mark svg { height:30px; width:30px; flex-shrink:0; display:block; }
   .logo-word { font-family:'Fraunces',serif; font-size:1.4rem; font-weight:600; color:var(--ivory); letter-spacing:-0.01em; }
   
+  .mobile-menu-btn { display:none; background:none; border:none; color:var(--ivory); width:32px; height:32px; cursor:pointer; }
   .nav-links { display:flex; gap:36px; align-items:center; }
   .nav-links a.link-item {
     font-size:0.9rem; font-weight:600; color:var(--ivory-muted);
@@ -333,6 +334,9 @@
     display:flex; align-items:center; justify-content:center;
     margin-bottom:20px; background: rgba(242, 169, 59, 0.15);
   }
+  .pin-card .icon-wrap svg {
+    width:24px; height:24px; flex-shrink:0; display:block;
+  }
   .pin-card h3 { font-size:1.3rem; margin-bottom:10px; color:var(--marigold); }
   .pin-card p { font-size:0.95rem; line-height:1.6; color:var(--ivory-muted); }
   .pin-card .status {
@@ -486,7 +490,16 @@
     .service-card.full-width { grid-template-columns: 1fr; }
   }
   @media (max-width:768px) {
-    .nav-links { display:none; }
+    .mobile-menu-btn { display:block; }
+    .nav-links {
+      display:none; 
+      position:absolute; top:100%; left:0; right:0;
+      background:rgba(42, 4, 16, 0.95);
+      backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+      flex-direction:column; padding:24px; gap:24px;
+      border-bottom:1px solid rgba(242, 169, 59, 0.2);
+    }
+    .nav-links.active { display:flex; }
     section.content-section { padding: 80px 0; }
     .pinboard, .safety-grid, .services-grid, .platform-features { grid-template-columns:1fr; gap: 24px; }
     .wrap { padding: 0 24px; }
@@ -526,7 +539,10 @@
       </svg>
       <span class="logo-word"><span style="color: var(--ivory)">her</span><span style="color: var(--marigold)">ise</span></span>
     </div>
-    <div class="nav-links">
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+    <div class="nav-links" id="nav-links">
       <a href="#manifesto" class="link-item">Our Belief</a>
       <a href="#vision" class="link-item">Vision Board</a>
       <a href="#flywheel" class="link-item">How It Works</a>
@@ -969,7 +985,17 @@
   }, {threshold:0.12});
   revealTargets.forEach(el => io.observe(el));
 
-
+  const mobileBtn = document.getElementById('mobileMenuBtn');
+  const navLinksList = document.getElementById('nav-links');
+  if(mobileBtn && navLinksList) {
+    mobileBtn.addEventListener('click', () => {
+      navLinksList.classList.toggle('active');
+    });
+    const linkItems = document.querySelectorAll('.link-item, .nav-cta');
+    linkItems.forEach(item => {
+      item.addEventListener('click', () => navLinksList.classList.remove('active'));
+    });
+  }
 </script>
 </body>
 </html>
