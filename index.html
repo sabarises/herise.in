@@ -110,12 +110,18 @@
   .nav-links a.link-item:hover, nav.scrolled .nav-links a.link-item:hover { color:var(--marigold-glow); }
   .nav-cta {
     padding:10px 24px; border-radius:100px;
-    background:var(--marigold); color:var(--burgundy-deep)!important;
+    background: transparent; color:var(--ivory)!important;
+    border: 1.5px solid rgba(253, 246, 238, 0.5);
     font-weight:700; font-size:0.9rem;
-    box-shadow:0 4px 14px rgba(242,169,59,0.35);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
   }
-  .nav-cta:hover { transform: translateY(-2px); box-shadow:0 6px 20px rgba(242,169,59,0.5); }
+  .nav-cta:hover, .nav-cta:active { 
+    background:var(--marigold); 
+    border-color:var(--marigold); 
+    color:var(--burgundy-deep)!important;
+    transform: translateY(-2px); 
+    box-shadow:0 6px 20px rgba(242,169,59,0.5); 
+  }
 
   /* ---------- HERO ---------- */
   .hero {
@@ -439,6 +445,7 @@
       <a href="#manifesto" class="link-item">Our Belief</a>
       <a href="#vision" class="link-item">Vision Board</a>
       <a href="#flywheel" class="link-item">How It Works</a>
+      <a href="#services" class="link-item">Services &amp; Opportunities</a>
       <a href="#safety" class="link-item">Trust &amp; Safety</a>
       <a href="#join" class="nav-cta">Join the Circle</a>
     </div>
@@ -663,6 +670,7 @@
         <a href="#manifesto">Our Belief</a>
         <a href="#vision">Vision Board</a>
         <a href="#flywheel">How It Works</a>
+        <a href="#services">Services &amp; Opportunities</a>
         <a href="#safety">Trust &amp; Safety</a>
       </div>
     </div>
